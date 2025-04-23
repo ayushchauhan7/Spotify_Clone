@@ -11,7 +11,11 @@ const seekBg = useRef();
 
 const [track, setTrack] = useState(songsData[0]);
 const [playStatus, setPlayStatus] = useState(false);
-const [time, setTime] = useState()
+	const [time, setTime] = useState({
+		currentTime: { minute: 0, second: 0 },
+		totalTime: { minute: 0, second: 0 }
+	});
+
 
 	const play = () => {
 	audioRef.current.play();
